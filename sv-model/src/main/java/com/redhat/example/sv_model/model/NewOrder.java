@@ -43,6 +43,10 @@ public class NewOrder implements java.io.Serializable
       this.hoaApproval = hoaApproval;
    }
    
-   
+   public String toString() {
+    return "New Order Date: "+this.getHoaMeetingDate()+", Hoa approval:"+this.hasHoaApproval();
+       
+   }
+
 
 }
