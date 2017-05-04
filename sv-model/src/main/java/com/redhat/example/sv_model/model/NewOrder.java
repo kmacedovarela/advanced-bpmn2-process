@@ -27,7 +27,7 @@ public class NewOrder implements java.io.Serializable
       this.hoaMeetingDate = hoaMeetingDate;
    }
 
-   public boolean isHoaApproval()
+   public boolean hasHoaApproval()
    {
       return this.hoaApproval;
    }
@@ -42,5 +42,7 @@ public class NewOrder implements java.io.Serializable
       this.hoaMeetingDate = hoaMeetingDate;
       this.hoaApproval = hoaApproval;
    }
+   
+   
 
 }
