@@ -17,9 +17,8 @@ public class StructuralPermit implements java.io.Serializable
    private boolean approved;
    private java.lang.Double totalCost;
 
-   public ElectricalPermit()
-   {
-   }
+   public StructuralPermit()
+   {}
 
    public java.lang.String getOwner()
    {
