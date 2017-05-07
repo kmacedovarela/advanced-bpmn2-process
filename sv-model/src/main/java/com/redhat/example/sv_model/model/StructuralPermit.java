@@ -11,10 +11,11 @@ public class StructuralPermit implements java.io.Serializable
 
    private java.lang.String owner;
    private java.util.Date submitDate;
-   private boolean approved;
    private java.lang.Double totalCost;
 
    private java.lang.String address;
+
+   private java.lang.String status;
 
    public StructuralPermit()
    {
@@ -40,16 +41,6 @@ public class StructuralPermit implements java.io.Serializable
       this.submitDate = submitDate;
    }
 
-   public boolean isApproved()
-   {
-      return this.approved;
-   }
-
-   public void setApproved(boolean approved)
-   {
-      this.approved = approved;
-   }
-
    public java.lang.Double getTotalCost()
    {
       return this.totalCost;
@@ -70,14 +61,25 @@ public class StructuralPermit implements java.io.Serializable
       this.address = address;
    }
 
+   public java.lang.String getStatus()
+   {
+      return this.status;
+   }
+
+   public void setStatus(java.lang.String status)
+   {
+      this.status = status;
+   }
+
    public StructuralPermit(java.lang.String owner, java.util.Date submitDate,
-         boolean approved, java.lang.Double totalCost, java.lang.String address)
+         java.lang.Double totalCost, java.lang.String address,
+         java.lang.String status)
    {
       this.owner = owner;
       this.submitDate = submitDate;
-      this.approved = approved;
       this.totalCost = totalCost;
       this.address = address;
+      this.status = status;
    }
 
 }
