@@ -15,6 +15,8 @@ public class NewOrder implements java.io.Serializable
 
    private java.lang.String salesman;
 
+   private java.lang.String status;
+
    public NewOrder()
    {
    }
@@ -75,12 +77,24 @@ public class NewOrder implements java.io.Serializable
       this.salesman = salesman;
    }
 
+   public java.lang.String getStatus()
+   {
+      return this.status;
+   }
+
+   public void setStatus(java.lang.String status)
+   {
+      this.status = status;
+   }
+
    public NewOrder(java.util.Date hoaMeetingDate, boolean hoaApproval,
-         java.lang.String address, java.lang.String salesman)
+         java.lang.String address, java.lang.String salesman,
+         java.lang.String status)
    {
       this.hoaMeetingDate = hoaMeetingDate;
       this.hoaApproval = hoaApproval;
       this.address = address;
       this.salesman = salesman;
+      this.status = status;
    }
 }
