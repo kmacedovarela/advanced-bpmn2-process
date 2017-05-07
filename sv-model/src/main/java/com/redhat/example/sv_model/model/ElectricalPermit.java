@@ -14,6 +14,8 @@ public class ElectricalPermit implements java.io.Serializable
    private boolean approved;
    private java.lang.Double totalCost;
 
+   private java.lang.String address;
+
    public ElectricalPermit()
    {
    }
@@ -58,13 +60,24 @@ public class ElectricalPermit implements java.io.Serializable
       this.totalCost = totalCost;
    }
 
+   public java.lang.String getAddress()
+   {
+      return this.address;
+   }
+
+   public void setAddress(java.lang.String address)
+   {
+      this.address = address;
+   }
+
    public ElectricalPermit(java.lang.String owner, java.util.Date submitDate,
-         boolean approved, java.lang.Double totalCost)
+         boolean approved, java.lang.Double totalCost, java.lang.String address)
    {
       this.owner = owner;
       this.submitDate = submitDate;
       this.approved = approved;
       this.totalCost = totalCost;
+      this.address = address;
    }
 
 }
