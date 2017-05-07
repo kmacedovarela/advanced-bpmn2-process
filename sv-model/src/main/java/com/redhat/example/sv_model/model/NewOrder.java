@@ -13,9 +13,6 @@ public class NewOrder implements java.io.Serializable
 
    private boolean hoaApproval;
 
-   private com.redhat.example.sv_model.model.ElectricalPermit electricalPermit;
-
-   private com.redhat.example.sv_model.model.StructuralPermit structuralPermit;
 
    public NewOrder()
    {
@@ -57,36 +54,12 @@ public class NewOrder implements java.io.Serializable
 
    }
 
-   public com.redhat.example.sv_model.model.ElectricalPermit getElectricalPermit()
-   {
-      return this.electricalPermit;
-   }
+  
 
-   public void setElectricalPermit(
-         com.redhat.example.sv_model.model.ElectricalPermit electricalPermit)
-   {
-      this.electricalPermit = electricalPermit;
-   }
-
-   public com.redhat.example.sv_model.model.StructuralPermit getStructuralPermit()
-   {
-      return this.structuralPermit;
-   }
-
-   public void setStructuralPermit(
-         com.redhat.example.sv_model.model.StructuralPermit structuralPermit)
-   {
-      this.structuralPermit = structuralPermit;
-   }
-
-   public NewOrder(java.util.Date hoaMeetingDate, boolean hoaApproval,
-         com.redhat.example.sv_model.model.ElectricalPermit electricalPermit,
-         com.redhat.example.sv_model.model.StructuralPermit structuralPermit)
+   public NewOrder(java.util.Date hoaMeetingDate, boolean hoaApproval,)
    {
       this.hoaMeetingDate = hoaMeetingDate;
       this.hoaApproval = hoaApproval;
-      this.electricalPermit = electricalPermit;
-      this.structuralPermit = structuralPermit;
    }
 
 }
