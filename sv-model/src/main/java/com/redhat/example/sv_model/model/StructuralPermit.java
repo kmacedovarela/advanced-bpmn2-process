@@ -6,9 +6,6 @@ package com.redhat.example.sv_model.model;
 
 public class StructuralPermit implements java.io.Serializable
 {
-
-   static final long serialVersionUID = 1L;
-
    public StructuralPermit()
    {
    }
