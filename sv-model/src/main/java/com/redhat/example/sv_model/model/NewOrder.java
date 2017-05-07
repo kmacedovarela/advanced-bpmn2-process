@@ -55,10 +55,9 @@ public class NewOrder implements java.io.Serializable
 
   
 
-   public NewOrder(java.util.Date hoaMeetingDate, boolean hoaApproval,)
+   public NewOrder(java.util.Date hoaMeetingDate, boolean hoaApproval)
    {
       this.hoaMeetingDate = hoaMeetingDate;
       this.hoaApproval = hoaApproval;
    }
-}
 }
