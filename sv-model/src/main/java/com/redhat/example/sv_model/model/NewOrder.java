@@ -7,11 +7,13 @@ package com.redhat.example.sv_model.model;
 public class NewOrder implements java.io.Serializable
 {
 
-
    private java.util.Date hoaMeetingDate;
 
    private boolean hoaApproval;
 
+   private java.lang.String address;
+
+   private java.lang.String salesman;
 
    public NewOrder()
    {
@@ -53,11 +55,32 @@ public class NewOrder implements java.io.Serializable
 
    }
 
-  
+   public java.lang.String getAddress()
+   {
+      return this.address;
+   }
 
-   public NewOrder(java.util.Date hoaMeetingDate, boolean hoaApproval)
+   public void setAddress(java.lang.String address)
+   {
+      this.address = address;
+   }
+
+   public java.lang.String getSalesman()
+   {
+      return this.salesman;
+   }
+
+   public void setSalesman(java.lang.String salesman)
+   {
+      this.salesman = salesman;
+   }
+
+   public NewOrder(java.util.Date hoaMeetingDate, boolean hoaApproval,
+         java.lang.String address, java.lang.String salesman)
    {
       this.hoaMeetingDate = hoaMeetingDate;
       this.hoaApproval = hoaApproval;
+      this.address = address;
+      this.salesman = salesman;
    }
 }
