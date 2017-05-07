@@ -6,7 +6,7 @@ package com.redhat.example.sv_model.model;
 
 public class StructuralPermit implements java.io.Serializable
 {
-   
+
    static final long serialVersionUID = 1L;
 
    private java.lang.String owner;
@@ -14,8 +14,11 @@ public class StructuralPermit implements java.io.Serializable
    private boolean approved;
    private java.lang.Double totalCost;
 
+   private java.lang.String address;
+
    public StructuralPermit()
-   {}
+   {
+   }
 
    public java.lang.String getOwner()
    {
@@ -55,6 +58,26 @@ public class StructuralPermit implements java.io.Serializable
    public void setTotalCost(java.lang.Double totalCost)
    {
       this.totalCost = totalCost;
+   }
+
+   public java.lang.String getAddress()
+   {
+      return this.address;
+   }
+
+   public void setAddress(java.lang.String address)
+   {
+      this.address = address;
+   }
+
+   public StructuralPermit(java.lang.String owner, java.util.Date submitDate,
+         boolean approved, java.lang.Double totalCost, java.lang.String address)
+   {
+      this.owner = owner;
+      this.submitDate = submitDate;
+      this.approved = approved;
+      this.totalCost = totalCost;
+      this.address = address;
    }
 
 }
