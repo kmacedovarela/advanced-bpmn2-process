@@ -60,5 +60,5 @@ public class NewOrder implements java.io.Serializable
       this.hoaMeetingDate = hoaMeetingDate;
       this.hoaApproval = hoaApproval;
    }
-
+}
 }
