@@ -13,4 +13,55 @@ public class StructuralPermit implements java.io.Serializable
    {
    }
 
+   static final long serialVersionUID = 1L;
+
+   private java.lang.String owner;
+   private java.util.Date submitDate;
+   private boolean approved;
+   private java.lang.Double totalCost;
+
+   public ElectricalPermit()
+   {
+   }
+
+   public java.lang.String getOwner()
+   {
+      return this.owner;
+   }
+
+   public void setOwner(java.lang.String owner)
+   {
+      this.owner = owner;
+   }
+
+   public java.util.Date getSubmitDate()
+   {
+      return this.submitDate;
+   }
+
+   public void setSubmitDate(java.util.Date submitDate)
+   {
+      this.submitDate = submitDate;
+   }
+
+   public boolean isApproved()
+   {
+      return this.approved;
+   }
+
+   public void setApproved(boolean approved)
+   {
+      this.approved = approved;
+   }
+
+   public java.lang.Double getTotalCost()
+   {
+      return this.totalCost;
+   }
+
+   public void setTotalCost(java.lang.Double totalCost)
+   {
+      this.totalCost = totalCost;
+   }
+
 }
