@@ -7,7 +7,6 @@ package com.redhat.example.sv_model.model;
 public class NewOrder implements java.io.Serializable
 {
 
-   static final long serialVersionUID = 1L;
 
    private java.util.Date hoaMeetingDate;
 
