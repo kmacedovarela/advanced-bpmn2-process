@@ -13,6 +13,8 @@ public class NewOrder implements java.io.Serializable
 
    private boolean hoaApproval;
 
+   private com.redhat.example.sv_model.model.ElectricalPermit electricalPermit;
+
    public NewOrder()
    {
    }
@@ -37,7 +39,7 @@ public class NewOrder implements java.io.Serializable
       return this.hoaApproval;
    }
 
-  public boolean getHoaApproval()
+   public boolean getHoaApproval()
    {
       return this.hoaApproval;
    }
@@ -47,16 +49,29 @@ public class NewOrder implements java.io.Serializable
       this.hoaApproval = hoaApproval;
    }
 
-   public NewOrder(java.util.Date hoaMeetingDate, boolean hoaApproval)
+   public String toString()
+   {
+      return "New Order Date: " + this.getHoaMeetingDate() + ", Hoa approval:" + this.hasHoaApproval();
+
+   }
+
+   public com.redhat.example.sv_model.model.ElectricalPermit getElectricalPermit()
+   {
+      return this.electricalPermit;
+   }
+
+   public void setElectricalPermit(
+         com.redhat.example.sv_model.model.ElectricalPermit electricalPermit)
+   {
+      this.electricalPermit = electricalPermit;
+   }
+
+   public NewOrder(java.util.Date hoaMeetingDate, boolean hoaApproval,
+         com.redhat.example.sv_model.model.ElectricalPermit electricalPermit)
    {
       this.hoaMeetingDate = hoaMeetingDate;
       this.hoaApproval = hoaApproval;
+      this.electricalPermit = electricalPermit;
    }
-   
-   public String toString() {
-    return "New Order Date: "+this.getHoaMeetingDate()+", Hoa approval:"+this.hasHoaApproval();
-       
-   }
-
 
 }
