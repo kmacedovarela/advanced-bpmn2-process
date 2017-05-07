@@ -15,6 +15,8 @@ public class NewOrder implements java.io.Serializable
 
    private com.redhat.example.sv_model.model.ElectricalPermit electricalPermit;
 
+   private com.redhat.example.sv_model.model.StructuralPermit structuralPermit;
+
    public NewOrder()
    {
    }
@@ -66,12 +68,25 @@ public class NewOrder implements java.io.Serializable
       this.electricalPermit = electricalPermit;
    }
 
+   public com.redhat.example.sv_model.model.StructuralPermit getStructuralPermit()
+   {
+      return this.structuralPermit;
+   }
+
+   public void setStructuralPermit(
+         com.redhat.example.sv_model.model.StructuralPermit structuralPermit)
+   {
+      this.structuralPermit = structuralPermit;
+   }
+
    public NewOrder(java.util.Date hoaMeetingDate, boolean hoaApproval,
-         com.redhat.example.sv_model.model.ElectricalPermit electricalPermit)
+         com.redhat.example.sv_model.model.ElectricalPermit electricalPermit,
+         com.redhat.example.sv_model.model.StructuralPermit structuralPermit)
    {
       this.hoaMeetingDate = hoaMeetingDate;
       this.hoaApproval = hoaApproval;
       this.electricalPermit = electricalPermit;
+      this.structuralPermit = structuralPermit;
    }
 
 }
