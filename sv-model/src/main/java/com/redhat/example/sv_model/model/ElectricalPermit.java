@@ -17,6 +17,8 @@ public class ElectricalPermit implements java.io.Serializable
 
    private java.lang.String status;
 
+   private java.lang.Integer id;
+
    public ElectricalPermit()
    {
    }
@@ -71,15 +73,26 @@ public class ElectricalPermit implements java.io.Serializable
       this.status = status;
    }
 
+   public java.lang.Integer getId()
+   {
+      return this.id;
+   }
+
+   public void setId(java.lang.Integer id)
+   {
+      this.id = id;
+   }
+
    public ElectricalPermit(java.lang.String owner, java.util.Date submitDate,
          java.lang.Double totalCost, java.lang.String address,
-         java.lang.String status)
+         java.lang.String status, java.lang.Integer id)
    {
       this.owner = owner;
       this.submitDate = submitDate;
       this.totalCost = totalCost;
       this.address = address;
       this.status = status;
+      this.id = id;
    }
 
 }
