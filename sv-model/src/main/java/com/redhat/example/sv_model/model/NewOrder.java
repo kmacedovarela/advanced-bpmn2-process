@@ -36,11 +36,6 @@ public class NewOrder implements java.io.Serializable
       return this.hoaApproval;
    }
 
-   public boolean hasHoaApproval()
-   {
-      return this.hoaApproval;
-   }
-
    public boolean getHoaApproval()
    {
       return this.hoaApproval;
