@@ -84,11 +84,11 @@ public class ElectricalPermit implements java.io.Serializable
    }
 
    public String toString(){
-       return "owner "+this.owner,
-        "submitDate "+submitDate,
-        "totalCost"+  totalCost,
-        "address"+address,
-         "id" + id, 
+       return "owner "+this.owner
+        "submitDate "+submitDate
+        "totalCost"+  totalCost
+        "address"+address
+         "id" + id
           "status "+ status;
 } 
    public ElectricalPermit(java.lang.String owner, java.util.Date submitDate,
