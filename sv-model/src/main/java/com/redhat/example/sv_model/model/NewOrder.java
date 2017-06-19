@@ -9,13 +9,13 @@ public class NewOrder implements java.io.Serializable
 
    private java.util.Date hoaMeetingDate;
 
-   private boolean hoaApproval;
-
    private java.lang.String address;
 
    private java.lang.String salesman;
 
    private java.lang.String status;
+
+   private boolean hoaApproval;
 
    public NewOrder()
    {
@@ -29,16 +29,6 @@ public class NewOrder implements java.io.Serializable
    public void setHoaMeetingDate(java.util.Date hoaMeetingDate)
    {
       this.hoaMeetingDate = hoaMeetingDate;
-   }
-
-   public boolean getHoaApproval()
-   {
-      return this.hoaApproval;
-   }
-
-   public void setHoaApproval(boolean hoaApproval)
-   {
-      this.hoaApproval = hoaApproval;
    }
 
    public String toString()
@@ -86,5 +76,25 @@ public class NewOrder implements java.io.Serializable
       this.address = address;
       this.salesman = salesman;
       this.status = status;
+   }
+
+   public boolean isHoaApproval()
+   {
+      return this.hoaApproval;
+   }
+
+   public void setHoaApproval(boolean hoaApproval)
+   {
+      this.hoaApproval = hoaApproval;
+   }
+
+   public NewOrder(java.util.Date hoaMeetingDate, java.lang.String address,
+         java.lang.String salesman, java.lang.String status, boolean hoaApproval)
+   {
+      this.hoaMeetingDate = hoaMeetingDate;
+      this.address = address;
+      this.salesman = salesman;
+      this.status = status;
+      this.hoaApproval = hoaApproval;
    }
 }
