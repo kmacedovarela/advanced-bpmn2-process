@@ -13,6 +13,7 @@ public class NewOrder implements java.io.Serializable
 
    private java.lang.String salesman;
 
+
    private java.lang.String status;
 
    private boolean hoaApproval;
@@ -33,7 +34,7 @@ public class NewOrder implements java.io.Serializable
 
    public String toString()
    {
-      return "New Order Date: " + this.getHoaMeetingDate() + ", Hoa approval:" + this.getHoaApproval();
+      return "New Order Date: " + this.getHoaMeetingDate() + ", Hoa approval:" + this.isHoaApproval();
 
    }
 
