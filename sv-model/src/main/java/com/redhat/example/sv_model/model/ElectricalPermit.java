@@ -10,7 +10,7 @@ public class ElectricalPermit implements java.io.Serializable
    static final long serialVersionUID = 1L;
 
    private java.lang.String owner;
-   private java.util.Date submitDate;
+   private String submitDate;
    private java.lang.Double totalCost;
 
    private java.lang.String address;
@@ -31,16 +31,6 @@ public class ElectricalPermit implements java.io.Serializable
    public void setOwner(java.lang.String owner)
    {
       this.owner = owner;
-   }
-
-   public java.util.Date getSubmitDate()
-   {
-      return this.submitDate;
-   }
-
-   public void setSubmitDate(java.util.Date submitDate)
-   {
-      this.submitDate = submitDate;
    }
 
    public java.lang.Double getTotalCost()
@@ -83,15 +73,27 @@ public class ElectricalPermit implements java.io.Serializable
       this.id = id;
    }
 
-   public String toString(){
-       return "owner "+this.owner+
-        "submitDate "+submitDate+
-        "totalCost"+  totalCost+
-        "address"+address+
-         "id" + id+
-          "status "+ status;
-} 
-   public ElectricalPermit(java.lang.String owner, java.util.Date submitDate,
+   public String toString()
+   {
+      return "owner " + this.owner +
+            "submitDate " + submitDate +
+            "totalCost" + totalCost +
+            "address" + address +
+            "id" + id +
+            "status " + status;
+   }
+
+   public java.lang.String getSubmitDate()
+   {
+      return this.submitDate;
+   }
+
+   public void setSubmitDate(java.lang.String submitDate)
+   {
+      this.submitDate = submitDate;
+   }
+
+   public ElectricalPermit(java.lang.String owner, java.lang.String submitDate,
          java.lang.Double totalCost, java.lang.String address,
          java.lang.String status, java.lang.Integer id)
    {
