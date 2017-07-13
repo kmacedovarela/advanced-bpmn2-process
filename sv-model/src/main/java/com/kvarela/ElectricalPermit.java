@@ -7,7 +7,7 @@ import java.util.Date;
  */
 
 @org.kie.api.remote.Remotable
-public class ElectricalPermit implements java.io.Serializable
+public class aaa implements java.io.Serializable
 {
 
    static final long serialVersionUID = 1L;
@@ -22,7 +22,7 @@ public class ElectricalPermit implements java.io.Serializable
 
    private java.lang.Integer id;
 
-   public ElectricalPermit()
+   public aaa()
    {
    }
 
@@ -96,7 +96,7 @@ public class ElectricalPermit implements java.io.Serializable
       this.submitDate = submitDate;
    }
 
-   public ElectricalPermit(java.lang.String owner, java.util.Date submitDate,
+   public aaa(java.lang.String owner, java.util.Date submitDate,
          java.lang.Double totalCost, java.lang.String address,
          java.lang.String status, java.lang.Integer id)
    {
