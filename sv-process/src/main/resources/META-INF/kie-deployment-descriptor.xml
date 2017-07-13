@@ -7,7 +7,13 @@
     <runtime-strategy>SINGLETON</runtime-strategy>
     <marshalling-strategies/>
     <event-listeners/>
-    <task-event-listeners/>
+    <task-event-listeners>
+        <task-event-listener>
+            <resolver>reflection</resolver>
+            <identifier>org.drools.core.event.DebugProcessEventListener</identifier>
+            <parameters/>
+        </task-event-listener>
+    </task-event-listeners>
     <globals/>
     <work-item-handlers>
         <work-item-handler>
@@ -43,5 +49,5 @@
         <remoteable-class>com.redhat.example.sv_model.model.StructuralPermit</remoteable-class>
         <remoteable-class>com.kvarela.ElectricalPermit</remoteable-class>
     </remoteable-classes>
-    <limit-serialization-classes>false</limit-serialization-classes>
+    <limit-serialization-classes>true</limit-serialization-classes>
 </deployment-descriptor>
