@@ -5,7 +5,7 @@ package com.kvarela;
  */
 
 @javax.persistence.Entity
-public class StructuralPermit extends com.kvarela.Permit implements java.io.Serializable 
+public class StructuralPermit implements java.io.Serializable 
 {
 
    static final long serialVersionUID = 1L;
