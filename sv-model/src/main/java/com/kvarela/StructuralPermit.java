@@ -17,13 +17,7 @@ public class StructuralPermit implements java.io.Serializable
 
    private java.lang.String address;
 
-   private java.lang.String owner;
-
    private java.lang.String status;
-
-   private java.util.Date submitDate;
-
-   private java.lang.Double totalCost;
 
    public StructuralPermit()
    {
@@ -49,16 +43,6 @@ public class StructuralPermit implements java.io.Serializable
       this.address = address;
    }
 
-   public java.lang.String getOwner()
-   {
-      return this.owner;
-   }
-
-   public void setOwner(java.lang.String owner)
-   {
-      this.owner = owner;
-   }
-
    public java.lang.String getStatus()
    {
       return this.status;
@@ -69,36 +53,12 @@ public class StructuralPermit implements java.io.Serializable
       this.status = status;
    }
 
-   public java.util.Date getSubmitDate()
-   {
-      return this.submitDate;
-   }
-
-   public void setSubmitDate(java.util.Date submitDate)
-   {
-      this.submitDate = submitDate;
-   }
-
-   public java.lang.Double getTotalCost()
-   {
-      return this.totalCost;
-   }
-
-   public void setTotalCost(java.lang.Double totalCost)
-   {
-      this.totalCost = totalCost;
-   }
-
    public StructuralPermit(java.lang.Long id, java.lang.String address,
-         java.lang.String owner, java.lang.String status,
-         java.util.Date submitDate, java.lang.Double totalCost)
+         java.lang.String status)
    {
       this.id = id;
       this.address = address;
-      this.owner = owner;
       this.status = status;
-      this.submitDate = submitDate;
-      this.totalCost = totalCost;
    }
 
 }
