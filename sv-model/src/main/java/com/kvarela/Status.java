@@ -6,9 +6,5 @@ package com.kvarela;
 
 public enum Status implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
-
-    public Status() {
-    }
-
+    INPROGRESS,DENIED,APROVED;
 }
