@@ -10,7 +10,7 @@ public class Order implements java.io.Serializable
    static final long serialVersionUID = 1L;
 
    private java.lang.String address;
-   private java.lang.Boolean hoaApproval;
+   private String hoaApproval;
    private java.util.Date hoaMeetingDate;
    private java.lang.String salesman;
 
@@ -26,16 +26,6 @@ public class Order implements java.io.Serializable
    public void setAddress(java.lang.String address)
    {
       this.address = address;
-   }
-
-   public java.lang.Boolean getHoaApproval()
-   {
-      return this.hoaApproval;
-   }
-
-   public void setHoaApproval(java.lang.Boolean hoaApproval)
-   {
-      this.hoaApproval = hoaApproval;
    }
 
    public java.util.Date getHoaMeetingDate()
@@ -58,7 +48,17 @@ public class Order implements java.io.Serializable
       this.salesman = salesman;
    }
 
-   public Order(java.lang.String address, java.lang.Boolean hoaApproval,
+   public java.lang.String getHoaApproval()
+   {
+      return this.hoaApproval;
+   }
+
+   public void setHoaApproval(java.lang.String hoaApproval)
+   {
+      this.hoaApproval = hoaApproval;
+   }
+
+   public Order(java.lang.String address, java.lang.String hoaApproval,
          java.util.Date hoaMeetingDate, java.lang.String salesman)
    {
       this.address = address;
