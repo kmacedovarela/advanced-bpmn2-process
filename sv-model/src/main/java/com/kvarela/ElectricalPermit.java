@@ -5,7 +5,7 @@ package com.kvarela;
  */
 
 @javax.persistence.Entity
-public class ElectricalPermit implements java.io.Serializable com.kvarela.Permit
+public class ElectricalPermit implements java.io.Serializable extends com.kvarela.Permit
 {
 
    static final long serialVersionUID = 1L;
