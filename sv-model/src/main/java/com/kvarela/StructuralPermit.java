@@ -10,9 +10,9 @@ public class StructuralPermit implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @javax.persistence.GeneratedValue(strategy = javax.persistence.GenerationType.AUTO, generator = "ELECTRICALPERMIT_ID_GENERATOR")
+   @javax.persistence.GeneratedValue(strategy = javax.persistence.GenerationType.AUTO, generator = "STRUCTURALPERMIT_ID_GENERATOR")
    @javax.persistence.Id
-   @javax.persistence.SequenceGenerator(name = "ELECTRICALPERMIT_ID_GENERATOR", sequenceName = "ELECTRICALPERMIT_ID_SEQ")
+   @javax.persistence.SequenceGenerator(name = "STRUCTURALPERMIT_ID_GENERATOR", sequenceName = "STRUCTURALPERMIT_ID_SEQ")
    private java.lang.Long id;
 
    private java.lang.String address;
