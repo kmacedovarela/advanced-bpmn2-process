@@ -27,7 +27,7 @@ If you need further details feel free to contact me.
 * Install and configure BPMS and Kie Server
 * Clone this [repo](https://github.com/kmacedovarela/advanced-bpmn2-process.git)
 * Create and start kie server container (Per Process Instance Runtime Strategy)
-* Start [WS Project](https://github.com/kmacedovarela/ws-permits] and [SMTP Server](https://github.com/kmacedovarela/advanced-bpmn2-process/blob/master/extra/fake-smtp.jar)
+* Start [WS Project](https://github.com/kmacedovarela/ws-permits) and [SMTP Server](https://github.com/kmacedovarela/advanced-bpmn2-process/blob/master/extra/fake-smtp.jar)
 * Test process using Kie Server REST API (Examples in topic 3)
 
 ## 3. Usage
