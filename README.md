@@ -173,11 +173,12 @@ Administrators=:en-UK:Administrators:[Administrator]
 
 #### 1.2.1. Prepare the WS project
 
-* Download and prepare [WS Permits REST API] (a) 
+* Download and prepare [WS Permits REST API](https://github.com/kmacedovarela/ws-permits/) 
 
 ### 1.2.2. Start the webservices project
 
-* Start the [WS Permits REST API] (a) that will be consumed by the process instances. 
+* Start the [WS Permits REST API](https://github.com/kmacedovarela/ws-permits/) that will be consumed by the process instances. Inside the project folder, run:
+`mvn wildfly-swarm:run`
 
 ## 1.3. Start your SMTP
 
