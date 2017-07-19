@@ -1,5 +1,5 @@
 # Solar Village 
-# Red Hat BPM Suite Advanced Process Features Usage Example
+## Red Hat BPM Suite Advanced Process Features Usage Example
 
 This is an example of bpmn2 process implementation with Red Hat BPMS 6.4 showing the use of KIE Server (and it's Rest API), human tasks, tasks compensation, notification and task reassignment, time cycle and REST WIH (consuming two services that runs on WildFly Swarm). 
 
