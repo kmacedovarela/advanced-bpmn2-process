@@ -25,7 +25,7 @@ If you need further details feel free to contact me.
 ## 2. Install #TLDR 
 * Install and configure BPMS and Kie Server
 * Clone this [repo] (https://github.com/kmacedovarela/advanced-bpmn2-process.git)
-* Create and start kie server container
+* Create and start kie server container (Per Process Instance Runtime Strategy)
 * Start WS Project and SMTP Server 
 * Test process using Kie Server REST API (Examples in 3. Usage)
 
@@ -159,6 +159,11 @@ Administrators=:en-UK:Administrators:[Administrator]
  * Build and deploy project `sv-process`
 
 ### Creating Kie Server Container
+* Access Tab `Deploy`, option `Execution Servers`
+* Click on `Add Container`
+* Select the project `sv-process`, and use the name `com.kvarela:sv-process:1.0`
+* Click `next`
+* Change the runtime strategy to `Per Process Instance`
 
 
 ### Prepare the WS project
