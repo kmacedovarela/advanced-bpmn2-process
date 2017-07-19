@@ -180,6 +180,4 @@ Administrators=:en-UK:Administrators:[Administrator]
 * In case of Fake SMTP you can use `$ java -jar fake-smtp.jar`
 
 ## Enjoy
-
-New Order Permit Process
-![New Order Permit Process](/extras/process-image.png)
+![New Order Process](https://user-images.githubusercontent.com/253186/28388344-cf645884-6ca8-11e7-9935-e86a55d0dcc2.png)
