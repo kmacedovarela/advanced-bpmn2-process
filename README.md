@@ -1,5 +1,5 @@
 # Solar Village 
-# bpms advanced process usage example
+# Red Hat BPM Suite Advanced Process Features Usage Example
 
 This is an example of bpmn2 process implementation with Red Hat BPMS 6.4 showing the use of KIE Server (and it's Rest API), human tasks, tasks compensation, notification and task reassignment, time cycle and REST WIH (consuming two services that runs on WildFly Swarm). 
 
@@ -17,20 +17,20 @@ Process image is at the end of this README.
 If you need further details feel free to contact me.
 
 ## 1. Pre reqs
- * [Red Hat BPM Suite 6.4 ] (https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=48471&product=bpm.suite&version=&downloadType=distributions)
+ * [Red Hat BPM Suite 6.4 ](https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=48471&product=bpm.suite&version=&downloadType=distributions)
  * Maven
  * Java >7
- * Fake SMTP (If you don't have any smtp server for a demo, this could fit)
+ * [Fake SMTP](https://github.com/kmacedovarela/advanced-bpmn2-process/blob/master/extra/fake-smtp.jar) (If you don't have any smtp server for a demo, this could fit)
  * WS Permits 
 
 ## 2. Install #TLDR 
 * Install and configure BPMS and Kie Server
-* Clone this [repo] (https://github.com/kmacedovarela/advanced-bpmn2-process.git)
+* Clone this [repo](https://github.com/kmacedovarela/advanced-bpmn2-process.git)
 * Create and start kie server container (Per Process Instance Runtime Strategy)
-* Start WS Project and SMTP Server 
-* Test process using Kie Server REST API (Examples in 3. Usage)
+* Start (WS Project)[https://github.com/kmacedovarela/ws-permits] and (SMTP Server)[https://github.com/kmacedovarela/advanced-bpmn2-process/blob/master/extra/fake-smtp.jar]
+* Test process using Kie Server REST API (Examples in topic 3)
 
-## Usage
+## 3. Usage
 * If you use the container name with the same name of the project GAV, (i.e. `com.kvarela:sv-process:1.0`) you will be able to see in Business Central, all the process instances and tasks created created by Kie Server.  
 
 ### Kie Server REST API:
@@ -72,8 +72,10 @@ PUT http://localhost:8081/kie-server/services/rest/server/containers/com.kvarela
 }
 ```
 
-## 4. Installation and Config with details
+## 4. Installation, configuration and running (with details)
+
 ### 1.1 Configure Red Hat BPM Suite
+
 #### 1.1.1 Configure EAP 
 
 * Add the Java Options in $JBOSS_HOME/bin/standalone.conf (Automatic marshaling for custom POJO and bypass user security)
@@ -141,7 +143,7 @@ executives=:en-UK:executives:[executive,bpms,Administrator]
 Administrators=:en-UK:Administrators:[Administrator]
 ```
 
-### Importing the project into JBoss BPM Suite
+### 1.1.2. Importing the project into JBoss BPM Suite
 
 * Start BPM Suite EAP:
 
@@ -159,7 +161,7 @@ Administrators=:en-UK:Administrators:[Administrator]
  * Build and deploy project `sv-model`
  * Build and deploy project `sv-process`
 
-### Creating Kie Server Container
+#### 1.1.3. Creating Kie Server Container
 * Access Tab `Deploy`, option `Execution Servers`
 * Click on `Add Container`
 * Select the project `sv-process`, and use the name `com.kvarela:sv-process:1.0`
@@ -167,16 +169,17 @@ Administrators=:en-UK:Administrators:[Administrator]
 * Change the runtime strategy to `Per Process Instance`
 
 
-### Prepare the WS project
+### 1.2. WS Project
+
+#### 1.2.1. Prepare the WS project
 
 * Download and prepare [WS Permits REST API] (a) 
 
-
-## Start the webservices project
+### 1.2.2. Start the webservices project
 
 * Start the [WS Permits REST API] (a) that will be consumed by the process instances. 
 
-## Start your SMTP
+## 1.3. Start your SMTP
 
 * In case of Fake SMTP you can use `$ java -jar fake-smtp.jar`
 
