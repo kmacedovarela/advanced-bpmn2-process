@@ -1,0 +1,788 @@
+{
+	"variables": [],
+	"info": {
+		"name": "sollarvilage",
+		"_postman_id": "9c5ac621-6eca-08b1-d449-cec7345fedb7",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "container-check",
+			"request": {
+				"url": "http://localhost:8080/kie-server/services/rest/server/containers/com.kvarela:sv-process:1.0",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic QWRtaW5pc3RyYXRvcjpLYXJpbmFAMTIz",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Start Process New Order",
+			"request": {
+				"url": "http://localhost:8081/kie-server/services/rest/server/containers/com.kvarela:sv-process:1.0/processes/sv-process.newOrderPermitting/instances",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic YnBtczpyZWRoYXRAMTIz",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"newOrder\" :{\n\t\t\"com.kvarela.NewOrder\": { \n\t\t\t\"address\":\"Endereco\" ,\n\t\t\t\"hoaApproval\": \"\",\n\t\t\t\"hoaMeetingDate\": \"2017-07-30\",\n\t\t\t\"salesman\": \"salesman\"\n\t\t} \n\t}\n}\n\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Claim task",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/kie-server/services/rest/server/containers/com.kvarela:sv-process:1.0/tasks/4/states/claimed?user=karina",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"com.kvarela:sv-process:1.0",
+						"tasks",
+						"4",
+						"states",
+						"claimed"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "karina",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic QWRtaW5pc3RyYXRvcjpLYXJpbmFAMTIz",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "List tasks for user",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8081/kie-server/services/rest/server/queries/tasks/instances/pot-owners?user=salesman",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"queries",
+						"tasks",
+						"instances",
+						"pot-owners"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "salesman\n",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic QWRtaW5pc3RyYXRvcjpLYXJpbmFAMTIz",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Claim task copy",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8081/kie-server/services/rest/server/containers/com.kvarela:sv-process:1.0/tasks/5/states/claimed?user=salesman",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"com.kvarela:sv-process:1.0",
+						"tasks",
+						"5",
+						"states",
+						"claimed"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "salesman",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic QWRtaW5pc3RyYXRvcjpLYXJpbmFAMTIz",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Start Task",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8081/kie-server/services/rest/server/containers/com.kvarela:sv-process:1.0/tasks/5/states/started?user=salesman",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"com.kvarela:sv-process:1.0",
+						"tasks",
+						"5",
+						"states",
+						"started"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "salesman",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic QWRtaW5pc3RyYXRvcjpLYXJpbmFAMTIz",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Start Task copy",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/kie-server/services/rest/server/containers/com.redhat.example:sv-process:1.0/tasks/2/states/claimed?user=karina",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"com.redhat.example:sv-process:1.0",
+						"tasks",
+						"2",
+						"states",
+						"claimed"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "karina",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic QWRtaW5pc3RyYXRvcjpLYXJpbmFAMTIz",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Complete Task ",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8081/kie-server/services/rest/server/containers/com.kvarela:sv-process:1.0/tasks/5/states/completed?user=salesman",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"com.kvarela:sv-process:1.0",
+						"tasks",
+						"5",
+						"states",
+						"completed"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "salesman",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic QWRtaW5pc3RyYXRvcjpLYXJpbmFAMTIz",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"outHoaApproval\": \"true\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Complete Task  copy",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/kie-server/services/rest/server/containers/com.redhat.example:sv-process:1.0/tasks/4/states/claimed?user=karina",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"com.redhat.example:sv-process:1.0",
+						"tasks",
+						"4",
+						"states",
+						"claimed"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "karina",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic QWRtaW5pc3RyYXRvcjpLYXJpbmFAMTIz",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Input variables",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/kie-server/services/rest/server/containers/com.kvarela:sv-process:1.0/tasks/1/contents/input?user=karina",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"com.kvarela:sv-process:1.0",
+						"tasks",
+						"1",
+						"contents",
+						"input"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "karina",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic QWRtaW5pc3RyYXRvcjpLYXJpbmFAMTIz",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Input variables copy",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8081/kie-server/services/rest/server/containers/com.kvarela:sv-process:1.0/tasks/5/contents/input?user=salesman",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"com.kvarela:sv-process:1.0",
+						"tasks",
+						"5",
+						"contents",
+						"input"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "salesman",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic QWRtaW5pc3RyYXRvcjpLYXJpbmFAMTIz",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Output variables ",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/kie-server/services/rest/server/containers/com.kvarela:sv-process:1.0/tasks/1/contents/output?user=karina",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"com.kvarela:sv-process:1.0",
+						"tasks",
+						"1",
+						"contents",
+						"output"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "karina",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic QWRtaW5pc3RyYXRvcjpLYXJpbmFAMTIz",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"outHoaMeeting\": false}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "list processes definitions",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/kie-server/services/rest/server/queries/tasks/instances/owners?user=karina",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"queries",
+						"tasks",
+						"instances",
+						"owners"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "karina\n",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic QWRtaW5pc3RyYXRvcjpLYXJpbmFAMTIz",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "update Output variables ",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/kie-server/services/rest/server/containers/com.kvarela:sv-process:1.0/tasks/1/contents/output?user=karina",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"com.kvarela:sv-process:1.0",
+						"tasks",
+						"1",
+						"contents",
+						"output"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "karina",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic QWRtaW5pc3RyYXRvcjpLYXJpbmFAMTIz",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"outHoaMeeting\": false}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "List tasks for potential owner",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8081/kie-server/services/rest/server/queries/tasks/instances/pot-owners?user=salesman",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"queries",
+						"tasks",
+						"instances",
+						"pot-owners"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "salesman\n",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic YnBtczpyZWRoYXRAMTIz",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Electrical Permit",
+			"request": {
+				"url": "http://127.0.0.1:8080/electricalpermit/1/APPROVED",
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Structural Permit",
+			"request": {
+				"url": "http://127.0.0.1:8080/structuralpermit/1/APPROVED",
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
